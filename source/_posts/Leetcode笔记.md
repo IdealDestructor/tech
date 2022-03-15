@@ -1,7 +1,7 @@
 ---
 title: Leetcode题解
 date: 2022-01-04 11:02:15
-categories: 算法
+categories: Algorithm
 tags: Leetcode
 feature: true
 cover: https://source.unsplash.com/pOwKTIgjKjU/1200x628

@@ -1,7 +1,7 @@
 ---
 title: 「前端面试」 JS 编程题目总结
 date: 2022-01-04 11:02:15
-categories: 前端
+categories: Frontend
 tags: 面经
 feature: false
 cover: https://source.unsplash.com/wh-RPfR_3_M/1600x900
