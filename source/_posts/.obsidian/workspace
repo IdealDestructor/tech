@@ -1,0 +1,114 @@
+{
+  "main": {
+    "id": "cff6f40eece74d8e",
+    "type": "split",
+    "children": [
+      {
+        "id": "247d28645287c835",
+        "type": "leaf",
+        "dimension": 49.52932657494569,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Leetcode笔记.md",
+            "mode": "source",
+            "source": false
+          }
+        },
+        "group": "a211bb4a7d0f1de5"
+      },
+      {
+        "id": "4a812a586f7e47b1",
+        "type": "leaf",
+        "dimension": 50.470673425054315,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Leetcode笔记.md",
+            "mode": "preview",
+            "source": false
+          }
+        },
+        "group": "a211bb4a7d0f1de5"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bff560a700da8b05",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f35f7cd34962a17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abc65671a3326643",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5598bf6304f1afa8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "7ac8372ad8dafa2b",
+    "type": "split",
+    "children": [
+      {
+        "id": "86fd705b995b9dd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b3fb1bce23cc02f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Leetcode笔记.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "247d28645287c835",
+  "lastOpenFiles": [
+    "Leetcode笔记.md",
+    "《深度学习推荐系统》读书笔记.md",
+    "未命名.md",
+    "Boosting & Bagging.md"
+  ]
+}

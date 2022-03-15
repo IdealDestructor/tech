@@ -13,12 +13,6 @@ cover: https://source.unsplash.com/pOwKTIgjKjU/1200x628
 
 ### 704.二分查找
 
-```markdown
-:::tip 注意
-很重要！
-:::
-```
-
 ```c++
 class Solution {
 public:
