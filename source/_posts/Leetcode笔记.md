@@ -4,7 +4,7 @@ date: 2022-01-04 11:02:15
 categories: 算法
 tags: Leetcode
 feature: true
-cover: https://source.unsplash.com/VivsxaizzVE/1200x628
+cover: https://source.unsplash.com/pOwKTIgjKjU/1200x628
 ---
 
 # 数组
