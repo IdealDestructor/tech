@@ -52,7 +52,7 @@ menu:
   About: false
   AboutMe:
     name: 'About'
-    path: 'http://idealdestructor.com'
+    path: 'http://idealdestructor.github.io'
 
 #! ---------------------------------------------------------------
 #! Theme Config
