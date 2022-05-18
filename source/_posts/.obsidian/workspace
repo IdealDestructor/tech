@@ -4,32 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "247d28645287c835",
+        "id": "102d3022edd57915",
         "type": "leaf",
-        "dimension": 49.52932657494569,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Leetcode笔记.md",
-            "mode": "source",
-            "source": false
-          }
-        },
-        "group": "a211bb4a7d0f1de5"
-      },
-      {
-        "id": "4a812a586f7e47b1",
-        "type": "leaf",
-        "dimension": 50.470673425054315,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Leetcode笔记.md",
+            "file": "推荐系统面试题&解答.md",
             "mode": "preview",
             "source": false
           }
-        },
-        "group": "a211bb4a7d0f1de5"
+        }
       }
     ],
     "direction": "vertical"
@@ -86,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode笔记.md",
+                "file": "推荐系统面试题&解答.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,12 +85,14 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "247d28645287c835",
+  "active": "102d3022edd57915",
   "lastOpenFiles": [
+    "推荐系统面试题&解答.md",
     "Leetcode笔记.md",
+    "前端面试复习计划.md",
+    "机器学习笔记.md",
     "《深度学习推荐系统》读书笔记.md",
     "未命名.md",
     "Boosting & Bagging.md"

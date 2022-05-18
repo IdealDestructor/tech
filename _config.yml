@@ -7,13 +7,13 @@ title: 技术分享
 subtitle: ''
 description: ''
 keywords:
-author: J析构理想
+author: 析构理想
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://tech.idealdestructor.com
+url: http://idealdestructor.github.io/tech
 permalink: /post/:title.html
 permalink_defaults:
 pretty_urls:
