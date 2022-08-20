@@ -13,7 +13,7 @@ site:
   author: 析构理想
   nick: IdealDestructor
   description: 在这个世界上，最让人畏惧的恰恰是通向自己的道路 <br /> @ <b>公众号：析构理想</b>
-  link: '/tech'
+  link: '/'
   language: en
   multi_language: true
   logo: https://s1.ax1x.com/2020/07/04/NxaLkV.jpg #https://img-blog.csdnimg.cn/20210313122054101.png
@@ -81,22 +81,22 @@ socials:
 
   ##! --- Using IconFont
     Github:
-      icon: /svg/github.svg
+      icon: https://idealdestructor.github.io/tech/svg/github.svg
       link: https://github.com/idealdestructor
     Twitter:
-      icon: /svg/twitter.svg
+      icon: https://idealdestructor.github.io/tech/svg/twitter.svg
       link: https://twitter.com/idealdestructor
     Instgram:
-      icon: /svg/instagram.svg
+      icon: https://idealdestructor.github.io/tech/svg/instagram.svg
       link: https://instagram.com/idealdestructor
     Weibo:
-      icon: /svg/weibo.svg
-      link: https://weibo.com/6019347563/profile
+      icon: https://idealdestructor.github.io/tech/svg/weibo.svg
+      link: https://weibo.com/idealdestructor
     Zhihu:
-      icon: /svg/zhihu.svg
+      icon: https://idealdestructor.github.io/tech/svg/zhihu.svg
       link: https://www.zhihu.com/people/idealdestructor
     Bilibili:
-      icon: /svg/bilibili.svg
+      icon: https://idealdestructor.github.io/tech/svg/bilibili.svg
       link: https://space.bilibili.com/305094533?spm_id_from=333.1007.0.0
   ##! --- Using FontAwesome
   # book:
