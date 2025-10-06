@@ -264,16 +264,14 @@ export const ImageViewer: React.FC<ImageViewerProps> = ({
                     aria-hidden="true"
                   />
                 ) : (
-                  <div className="max-h-[90vh] max-w-[90vw] cursor-pointer">
-                    <img
-                      src={state.image}
-                      alt={state.alt}
-                      className="object-contain"
-                      onLoad={handleImageLoad}
-                      onError={handleImageError}
-                      aria-label="Close"
-                    />
-                  </div>
+                  <img
+                    src={state.image}
+                    alt={state.alt}
+                    className="max-h-[90vh] max-w-[90vw] cursor-pointer object-contain"
+                    onLoad={handleImageLoad}
+                    onError={handleImageError}
+                    aria-label="Close"
+                  />
                 )}
               </button>
 
