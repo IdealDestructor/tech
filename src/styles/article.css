@@ -69,7 +69,6 @@
 
 .prose-teahouse h3 {
   font-size: 1.4rem;
-  /* color: var(--tea-main); */
 }
 
 .prose-teahouse p {
@@ -90,7 +89,6 @@
 }
 
 .prose-teahouse a {
-  /* color: var(--tea-main); */
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -172,7 +170,6 @@
 }
 
 .prose-teahouse li::marker {
-  color: var(--tea-main);
   font-weight: bold;
 }
 
@@ -186,7 +183,6 @@
 
 .prose-teahouse th {
   background-color: var(--tea-light);
-  /* color: var(--tea-main); */
   font-weight: 600;
   padding: 0.8em;
   text-align: left;
@@ -264,7 +260,6 @@
 }
 
 .prose-teahouse .paywall-container h3 {
-  /* color: var(--tea-main); */
   font-size: 1.5rem;
   margin-top: var(--spacing-sm);
   font-weight: 700;
