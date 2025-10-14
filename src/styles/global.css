@@ -442,7 +442,7 @@ pre.mermaid {
 /* Reveal viewport responsive styles */
 @media (max-width: 600px) {
   .reveal-viewport h2 {
-    font-size: 1.5em !important;
+    font-size: 1.5em;
   }
 
   .reveal-viewport p,
@@ -453,7 +453,7 @@ pre.mermaid {
 
 @media (max-width: 485px) {
   .reveal-viewport h2 {
-    font-size: 1em !important;
+    font-size: 1em;
   }
 
   .reveal-viewport p,
