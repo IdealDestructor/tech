@@ -1,23 +1,28 @@
 ---
-
 ---
 
 <footer class="border-t border-slate-800 bg-slate-950">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="py-8">
-      <p
-        class="text-center text-sm text-slate-500 flex items-center justify-center gap-2"
-      >
-        © {new Date().getFullYear()}{" "}
+    <div class="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-sm text-slate-500">
         <img
           src="/logo.webp"
           alt="Mona"
           width={120}
           height={40}
           class="h-6 w-auto"
-        />{" "}
-        Mona. Learn from What We Build.
-      </p>
+        />
+        <span>© {new Date().getFullYear()} Mona. Learn from What We Build.</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a
+          href='/rss.xml'
+          target="_blank"
+        >
+          <img src="/rss.svg" alt="RSS" class="w-5 h-5 invert"/> 
+        </a>
+      </div>
     </div>
   </div>
 </footer>
