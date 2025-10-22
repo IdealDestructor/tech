@@ -5,19 +5,17 @@ import FormattedDate from "@/components/FormattedDate.astro";
 import { ImageViewer } from "@/components/image-viewer";
 import ContentNavigation from "@/components/navigation/ContentNavigation.astro";
 import ShareButtons from "@/components/ShareButtons.astro";
-import TagFilter from "@/components/TagFilter.astro";
-import { SITE_TITLE } from "@/consts";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { getAdjacentContent } from "@/lib/navigation";
 import "@/styles/article.css";
 
-// add all blog posts to sitemap
 sitemap(async ({ addToSitemap }) => {
-  const blogPosts = await getCollection("blogs");
+  const doodles = await getCollection("doodles");
 
   addToSitemap(
-    blogPosts.map((post) => ({
-      slug: post.id,
+    doodles.map((item) => ({
+      slug: item.id,
     })),
   );
 });
@@ -31,64 +29,51 @@ if (slug === undefined) {
 }
 
 const slugId = Array.isArray(slug) ? slug.join("/") : slug;
-const post = await getEntry("blogs", slugId);
+const doodle = await getEntry("doodles", slugId);
 
-if (!post) {
+if (!doodle) {
   return Astro.redirect("/404");
 }
 
-const { Content } = await render(post);
+const { Content } = await render(doodle);
 const origin = Astro.url.origin;
-const allBlogs = await getCollection("blogs");
-const adjacentContent = getAdjacentContent(allBlogs, post.id);
-const tags = post.data.tags || [];
-const pageTitle = `${post.data.title} | ${SITE_TITLE}`;
+const title = doodle.data.title;
+const description = doodle.data.description || SITE_DESCRIPTION;
+const pageTitle = `${title} | ${SITE_TITLE}`;
+const allDoodles = await getCollection("doodles");
+const adjacentContent = getAdjacentContent(allDoodles, doodle.id);
 ---
 
 <MainLayout
   title={pageTitle}
-  description={post.data.description}
+  description={description}
   type="article"
-  author={post.data.author}
-  publishedTime={post.data.pubDate.toISOString()}
-  modifiedTime={post.data.updatedDate?.toISOString()}
-  section="Blog"
-  tags={tags}
-  keywords={tags.join(", ")}
+  publishedTime={doodle.data.pubDate.toISOString()}
+  modifiedTime={doodle.data.endDate.toISOString()}
+  section="Doodle"
 >
   <article class="container px-4 md:px-6 prose-teahouse">
     <div class="max-w-screen-lg mx-auto p-4">
       <div class="mb-4 py-4 text-center leading-none">
-        <h1 class="mb-2 font-serif">{post.data.title}</h1>
+        <h1 class="mb-2 font-serif">{title}</h1>
         <div class="date mb-2 text-gray-500">
-          <FormattedDate date={post.data.pubDate} />
+          <FormattedDate date={doodle.data.pubDate} />
           {
-            post.data.updatedDate && (
-              <div class="last-updated-on italic mb-4">
-                Last updated on <FormattedDate date={post.data.updatedDate} />
+            doodle.data.endDate && (
+              <div class="text-sm italic mb-2">
+                Ends on <FormattedDate date={doodle.data.endDate} />
               </div>
             )
           }
         </div>
-        {post.data.author && <div class="text-gray-500">{post.data.author}</div>}
       </div>
-      <div
-        class="block space-y-4 md:flex md:items-center md:justify-between md:space-y-0"
-      >
-        {
-          tags.length > 0 && (
-            <TagFilter
-              tags={tags.map((tag) => ({ tag, size: 1 }))}
-              type="blogs"
-              usedFor="detail"
-            />
-          )
-        }
+      <div class="flex items-center justify-between">
+        <div></div>
         <div class="flex items-center gap-2 lg:justify-end">
           <ShareButtons
-            url={`${origin}/blogs/${post.id}`}
-            title={post.data.title}
-            description={post.data.description}
+            url={`${origin}/doodles/${doodle.id}`}
+            title={title}
+            description={description}
           />
         </div>
       </div>
@@ -100,7 +85,7 @@ const pageTitle = `${post.data.title} | ${SITE_TITLE}`;
     <div class="max-w-screen-lg mx-auto p-4">
       <ContentNavigation
         adjacentContent={adjacentContent}
-        contentType="blogs"
+        contentType="doodles"
       />
     </div>
   </article>

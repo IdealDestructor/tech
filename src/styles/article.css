@@ -101,7 +101,7 @@
 }
 
 .prose-teahouse a:hover {
-  color: var(--tea-main-light);
+  color: hsl(var(--primary));
   background-color: transparent;
   transform: none;
 }

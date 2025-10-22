@@ -52,8 +52,23 @@ const allTags = [
 const uniqueTags = [...new Set(allTags)];
 
 const posts = allPosts.slice(0, 3);
-const cards = allCards.slice(0, 9);
+const cards = allCards.slice(0, 6);
 const slides = allSlides.slice(0, 6);
+
+// Get active doodle
+const now = new Date();
+const activeDoodleEntry = (await getCollection("doodles"))
+  .filter((doodle) => doodle.data.pubDate <= now && doodle.data.endDate >= now)
+  .sort((a, b) => {
+    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+  })[0];
+
+const activeDoodle = activeDoodleEntry
+  ? {
+      ...activeDoodleEntry.data,
+      href: `/doodles/${activeDoodleEntry.id}`,
+    }
+  : undefined;
 ---
 
 <MainLayout
@@ -61,7 +76,7 @@ const slides = allSlides.slice(0, 6);
   description={SITE_DESCRIPTION}
   className="w-full p-0"
 >
-  <HeroSection uniqueTags={uniqueTags} />
+  <HeroSection uniqueTags={uniqueTags} doodle={activeDoodle} />
 
   <div class="px-4 md:px-6">
     <LatestSection

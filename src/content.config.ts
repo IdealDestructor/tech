@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { BlogMetadata } from "./schemas/blog";
 import { CardMetadata } from "./schemas/card";
+import { DoodleMetadata } from "./schemas/doodle";
 import { SlideMetadata } from "./schemas/slide";
 
 const blogs = defineCollection({
@@ -22,4 +23,9 @@ const slides = defineCollection({
   schema: SlideMetadata,
 });
 
-export const collections = { blogs, cards, slides };
+const doodles = defineCollection({
+  loader: glob({ base: "./src/content/doodles", pattern: "**/*.{md,mdx}" }),
+  schema: DoodleMetadata,
+});
+
+export const collections = { blogs, cards, slides, doodles };

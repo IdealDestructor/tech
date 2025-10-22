@@ -113,3 +113,16 @@ export const MENU_ITEMS: MenuItem[] = [
 export const getNavigationItems = (): MenuItem[] => {
   return MENU_ITEMS;
 };
+
+export const DOODLE_EMOJIS = [
+  "✨",
+  "🚀",
+  "💡",
+  "🎉",
+  "🔥",
+  "🌟",
+  "🤖",
+  "🎃",
+  "🔊",
+  "📡",
+];
