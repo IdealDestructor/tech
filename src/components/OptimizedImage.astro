@@ -1,0 +1,85 @@
+---
+import type { LocalImageProps } from "astro:assets";
+import { Image } from "astro:assets";
+import type { ImageMetadata, ImageQuality } from "astro";
+import { ASSETS_IMAGES_PREFIX } from "@/consts";
+
+interface Props {
+  src: string | ImageMetadata | Promise<{ default: ImageMetadata }>;
+  alt: string;
+  width?: number;
+  height?: number;
+  quality?: ImageQuality;
+  widths?: number[];
+  sizes?: string;
+  class?: string;
+}
+
+const assetModules = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/{*,**/*}.{avif,gif,jpeg,jpg,png,webp,svg}",
+);
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  quality = 90,
+  widths,
+  sizes,
+  class: className,
+} = Astro.props;
+
+const resolvedSource = resolveSource(src);
+
+function resolveSource(
+  rawSrc: Props["src"],
+): string | ImageMetadata | Promise<{ default: ImageMetadata }> {
+  if (typeof rawSrc === "string") {
+    if (isRemotePath(rawSrc) || rawSrc.startsWith("data:")) {
+      return rawSrc;
+    }
+
+    const normalizedPath = normalizeAssetPath(rawSrc);
+    const loader = assetModules[normalizedPath];
+
+    if (loader) {
+      return loader();
+    }
+
+    if (rawSrc.startsWith(ASSETS_IMAGES_PREFIX)) {
+      throw new Error(
+        `OptimizedImage: "${rawSrc}" does not exist inside /src/assets/images.`,
+      );
+    }
+
+    return rawSrc;
+  }
+
+  return rawSrc;
+}
+
+function normalizeAssetPath(path: string) {
+  const value = path.startsWith("/") ? path : `/${path}`;
+  if (value.startsWith(ASSETS_IMAGES_PREFIX)) {
+    return value;
+  }
+
+  return `${ASSETS_IMAGES_PREFIX}${value}`;
+}
+
+function isRemotePath(value: string) {
+  return /^(?:https?:)?\/\//i.test(value);
+}
+---
+
+<Image
+  src={resolvedSource as LocalImageProps["src"]}
+  alt={alt}
+  width={width}
+  height={height}
+  quality={quality}
+  widths={widths}
+  sizes={sizes}
+  class:list={[className]}
+/>

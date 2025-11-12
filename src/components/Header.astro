@@ -1,7 +1,7 @@
 ---
 import { Search } from "lucide-react";
 import BetaBadge from "@/components/BetaBadge.astro";
-import CustomImage from "@/components/CustomImage.astro";
+import OptimizedImage from "@/components/OptimizedImage.astro";
 import { getNavigationItems, SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
 
@@ -14,7 +14,7 @@ const visibleMenuItems = getNavigationItems();
   <div class="container flex h-16 items-center justify-between">
     <div class="flex items-center gap-6 md:gap-8">
       <a href="/" class="flex items-center space-x-2 md:ml-0 ml-4">
-        <CustomImage
+        <OptimizedImage
           src="/logo.webp"
           alt="mona"
           width={40}
