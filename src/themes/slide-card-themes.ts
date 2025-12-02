@@ -170,7 +170,7 @@ export function generateThemeStyles(theme: string, uniqueId: string): string {
       font-weight: ${config.titleWeight} !important;
       text-transform: ${config.titleTransform} !important;
       color: ${config.titleColor} !important;
-      font-size: 32px !important;
+      font-size: 18px !important;
       padding-left: 8px;
       padding-right: 8px;
       display: -webkit-box;
@@ -188,8 +188,8 @@ export function generateThemeStyles(theme: string, uniqueId: string): string {
     .reveal-${uniqueId.replace(/:/g, "-")} .slides section em {
       font-family: ${config.textFont} !important;
       color: ${config.textColor} !important;
-      font-size: 20px !important;
-      line-height: 0.8 !important;
+      font-size: 12px !important;
+      line-height: 1.2 !important;
       letter-spacing: normal !important;
     }
 

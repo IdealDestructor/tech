@@ -1,10 +1,6 @@
 ---
 import { randomUUID } from "node:crypto";
-import {
-  EmailShareButton,
-  LinkedInShareButton,
-  TwitterShareButton,
-} from "astro-social-share";
+import { EmailShareButton, TwitterShareButton } from "astro-social-share";
 import { Mail, Share2 } from "lucide-react";
 import { CopyButton } from "./copy-button";
 
@@ -107,9 +103,6 @@ const shareButtonClass = [
   />
   <div class={`${shareButtonClass} twitter-share`}>
     <TwitterShareButton url={url} description={title} />
-  </div>
-  <div class={shareButtonClass}>
-    <LinkedInShareButton url={url} title={title} description={shareDescription} />
   </div>
   <div class={`${shareButtonClass} mail-share`}>
     <EmailShareButton title={title} description={shareDescription}>

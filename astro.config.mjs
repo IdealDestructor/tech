@@ -3,10 +3,12 @@ import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import sitemap from "@inox-tools/sitemap-ext";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import { analyzer } from "vite-bundle-analyzer";
 import { env } from "./src/env";
+
+const isDev = process.argv.includes("dev");
 
 export default defineConfig({
   server: {
@@ -17,9 +19,10 @@ export default defineConfig({
   output: "server",
   image: {
     domains: ["public-files.gumroad.com"],
+    service: isDev ? passthroughImageService() : undefined,
   },
   adapter: vercel({
-    imageService: true,
+    imageService: !isDev,
   }),
   site: env().SITE_URL,
   markdown: {

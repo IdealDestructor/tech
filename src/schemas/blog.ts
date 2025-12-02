@@ -28,6 +28,7 @@ export const BlogMetadata = PageBaseMetadata.extend({
   author: z.string().optional(),
   tags: z.array(z.string()).default([]),
   metadata: z.array(z.string()).optional(),
+  image: z.string().optional(),
 });
 
 export const BaseAIConfig = z.object({

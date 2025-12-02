@@ -18,18 +18,18 @@ const {
 } = Astro.props;
 ---
 
-<section class="bg-slate-900/30 py-24">
+<section class="bg-slate-200/50 dark:bg-slate-900/30 py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mb-16 flex items-center justify-between">
       <div>
-        <h2 class="mb-4 text-3xl font-bold text-white">
+        <h2 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white">
           Latest <span class={accentColor}>{title}</span>
         </h2>
-        <p class="text-slate-400">{description}</p>
+        <p class="text-slate-600 dark:text-slate-400">{description}</p>
       </div>
       <a
         href={viewAllHref}
-        class="inline-flex items-center gap-2 rounded-md border border-slate-600 bg-transparent px-4 py-2 text-sm font-medium text-slate-300 shadow-xs transition-all duration-300 hover:scale-105 hover:bg-slate-800 hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 outline-none"
+        class="inline-flex items-center gap-2 rounded-md border border-slate-400 dark:border-slate-600 bg-transparent px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 shadow-xs transition-all duration-300 hover:scale-105 hover:bg-slate-300 dark:hover:bg-slate-800 hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 outline-none"
         style={`min-width: ${viewAllButtonWidth}`}
       >
         {viewAllText}

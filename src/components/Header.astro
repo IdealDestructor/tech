@@ -1,7 +1,6 @@
 ---
-import { Search } from "lucide-react";
+import { Moon, Search, Sun } from "lucide-react";
 import BetaBadge from "@/components/BetaBadge.astro";
-import OptimizedImage from "@/components/OptimizedImage.astro";
 import { getNavigationItems, SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
 
@@ -9,21 +8,30 @@ const visibleMenuItems = getNavigationItems();
 ---
 
 <header
-  class="sticky top-0 z-50 w-full border-b border-teahouse-primary/10 bg-teahouse-bg/95 backdrop-blur supports-[backdrop-filter]:bg-teahouse-bg/60"
+  class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-700/50 bg-white/95 dark:bg-slate-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-950/60"
 >
   <div class="container flex h-16 items-center justify-between">
     <div class="flex items-center gap-6 md:gap-8">
       <a href="/" class="flex items-center space-x-2 md:ml-0 ml-4">
-        <OptimizedImage
-          src="/logo.webp"
-          alt="mona"
+        <img
+          id="logo-dark"
+          src="/logo.jpg"
+          alt="IDEALX"
           width={40}
           height={40}
-          class="h-10 w-10"
+          class="h-10 w-10 hidden dark:block"
+        />
+        <img
+          id="logo-light"
+          src="/logo_w.jpg"
+          alt="IDEALX"
+          width={40}
+          height={40}
+          class="h-10 w-10 block dark:hidden"
         />
         <div>
           <div
-            class="font-noto-serif text-xl font-bold text-teahouse-dark font-['Noto_Serif_SC',_'Noto_Serif_SC_Fallback',_serif]"
+            class="font-noto-serif text-xl font-bold text-slate-900 dark:text-white font-['Noto_Serif_SC',_'Noto_Serif_SC_Fallback',_serif]"
           >
             {SITE_TITLE}
           </div>
@@ -37,7 +45,7 @@ const visibleMenuItems = getNavigationItems();
     <div class="flex items-center gap-4">
       <button
         id="mobile-menu-button"
-        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-primary hover:bg-teahouse-primary/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teahouse-primary"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 transition-colors"
         aria-controls="mobile-menu"
         aria-expanded="false"
       >
@@ -79,10 +87,19 @@ const visibleMenuItems = getNavigationItems();
         }
       </nav>
     </div>
-    <div class="hidden md:block">
+    <div class="hidden md:flex items-center gap-2">
+      <button
+        id="theme-toggle"
+        type="button"
+        class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 transition-colors"
+        aria-label="Toggle theme"
+      >
+        <Sun className="w-5 h-5 hidden dark:block" />
+        <Moon className="w-5 h-5 block dark:hidden" />
+      </button>
       <a
         href="/search"
-        class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium hover:text-primary transition-colors text-white"
+        class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium hover:text-primary transition-colors text-slate-700 dark:text-white"
       >
         <Search className="w-4 h-4" />
         Search
@@ -92,26 +109,35 @@ const visibleMenuItems = getNavigationItems();
 
   <div class="md:hidden" id="mobile-menu">
     <div
-      class="hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-teahouse-bg border-t border-slate-800"
+      class="hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800"
     >
       {
         visibleMenuItems.map((item) => (
           <a
             href={item.href}
-            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+            class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-white hover:text-primary"
           >
             {item.label}
           </a>
         ))
       }
-      <div class="px-3 py-2">
+      <div class="px-3 py-2 flex items-center justify-between">
         <a
           href="/search"
-          class="flex items-center gap-2 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+          class="flex items-center gap-2 py-2 rounded-md text-base font-medium text-slate-700 dark:text-white hover:text-primary"
         >
           <Search className="w-4 h-4" />
           Search
         </a>
+        <button
+          id="theme-toggle-mobile"
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none transition-colors"
+          aria-label="Toggle theme"
+        >
+          <Sun className="w-5 h-5 hidden dark:block" />
+          <Moon className="w-5 h-5 block dark:hidden" />
+        </button>
       </div>
     </div>
   </div>
@@ -119,6 +145,7 @@ const visibleMenuItems = getNavigationItems();
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu logic
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
     const menuContent = mobileMenu?.querySelector("div");
@@ -159,5 +186,23 @@ const visibleMenuItems = getNavigationItems();
         });
       });
     }
+
+    // Theme toggle logic
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      if (isDark) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    themeToggle?.addEventListener("click", toggleTheme);
+    themeToggleMobile?.addEventListener("click", toggleTheme);
   });
 </script>

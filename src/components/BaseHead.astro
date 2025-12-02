@@ -7,7 +7,6 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
-  image?: string;
   keywords?: string;
   robots?: string;
   author?: string;
@@ -23,7 +22,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
   description,
-  image = "/og.webp",
   keywords,
   robots = "index, follow",
   author,
@@ -33,11 +31,6 @@ const {
   section,
   tags = [],
 } = Astro.props;
-
-const absoluteImageUrl = image?.startsWith("http")
-  ? image
-  : new URL(image, Astro.url).toString();
-
 // Generate structured data
 const articleStructuredData =
   type === "article"
@@ -46,7 +39,6 @@ const articleStructuredData =
         "@type": "Article",
         headline: title,
         description: description,
-        image: absoluteImageUrl,
         url: Astro.url.toString(),
         datePublished: publishedTime,
         dateModified: modifiedTime || publishedTime,
@@ -59,7 +51,7 @@ const articleStructuredData =
           name: SITE_TITLE,
           logo: {
             "@type": "ImageObject",
-            url: new URL("/logo.webp", Astro.site).toString(),
+            url: new URL("/logo.jpg", Astro.site).toString(),
           },
         },
         mainEntityOfPage: {
@@ -100,7 +92,6 @@ const productStructuredData =
         "@type": "Product",
         name: title,
         description: description,
-        image: absoluteImageUrl,
         url: Astro.url.toString(),
         brand: {
           "@type": "Brand",
@@ -111,7 +102,7 @@ const productStructuredData =
           name: SITE_TITLE,
           logo: {
             "@type": "ImageObject",
-            url: new URL("/logo.webp", Astro.site).toString(),
+            url: new URL("/logo.jpg", Astro.site).toString(),
           },
         },
       }
@@ -152,8 +143,7 @@ const productStructuredData =
 <!-- Resource hints -->
 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-<link href="/logo.webp" as="image" type="image/webp" />
-<link href="/og.webp" as="image" type="image/webp" />
+<link href="/logo.jpg" as="image" type="image/webp" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -168,7 +158,6 @@ const productStructuredData =
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={absoluteImageUrl} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={title} />
@@ -203,7 +192,7 @@ const productStructuredData =
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={absoluteImageUrl} />
+<meta name="twitter:image" content={} />
 <meta name="twitter:image:alt" content={title} />
 <meta name="twitter:image:width" content="1200" />
 <meta name="twitter:image:height" content="630" />

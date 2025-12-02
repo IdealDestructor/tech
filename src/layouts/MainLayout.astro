@@ -28,7 +28,6 @@ interface Props {
 const {
   title,
   description,
-  image,
   className,
   keywords,
   robots,
@@ -43,12 +42,11 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="mona">
+<html lang="en" class="mona dark">
   <head>
     <BaseHead
       title={title}
       description={description}
-      image={image}
       keywords={keywords}
       robots={robots}
       author={author}
@@ -68,7 +66,7 @@ const {
     }
   </head>
   <body>
-    <div class="flex min-h-screen flex-col bg-teahouse-bg">
+    <div class="flex min-h-screen flex-col bg-slate-50 dark:bg-slate-950">
       <Header />
       <main class="flex-1">
         <div class={cn(className ? className : "container p-4 md:p-6 mx-auto")}>
@@ -78,6 +76,20 @@ const {
       <Footer />
     </div>
     <Toaster client:load />
+    <script is:inline>
+      // 主题初始化 - 在页面加载前执行，避免闪烁
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
     <script is:inline type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true });

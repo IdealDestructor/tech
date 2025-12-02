@@ -9,7 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 >
   <div class="container mx-auto px-4 py-8">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl font-bold text-teahouse-dark mb-8">Search</h1>
+      <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">Search</h1>
 
       <div id="search-container">
         <!-- Pagefind search will be initialized here -->
@@ -162,8 +162,10 @@ import MainLayout from "../layouts/MainLayout.astro";
       console.error("Failed to load pagefind:", error);
       const searchContainer = document.getElementById("search-container");
       if (searchContainer) {
-        searchContainer.innerHTML =
-          '<div class="text-center py-8 text-red-500">Search functionality is currently unavailable. Please try again later.</div>';
+        const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        searchContainer.innerHTML = isDev
+          ? '<div class="text-center py-8 text-amber-400 bg-amber-900/20 rounded-lg"><p class="font-semibold mb-2">⚠️ 开发环境提示</p><p class="text-sm">搜索功能需要先构建项目才能使用。请运行 <code class="bg-slate-800 px-2 py-1 rounded">pnpm build</code> 生成搜索索引。</p></div>'
+          : '<div class="text-center py-8 text-red-500">Search functionality is currently unavailable. Please try again later.</div>';
       }
     }
   });

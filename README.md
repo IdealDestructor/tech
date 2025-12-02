@@ -1,5 +1,3 @@
-# MonaKit
-
 An Astro theme featuring multi-format content including knowledge cards, articles, slide presentations, and doodle announcements.
 
 ## Features

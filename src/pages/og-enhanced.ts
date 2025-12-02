@@ -9,7 +9,7 @@ import {
 } from "@/lib/utils";
 import { KNOWLEDGE_CARD_THEME } from "@/themes/knowledge-card-themes";
 import { SLIDE_THEME_CONFIG } from "@/themes/slide-card-themes";
-import logo from "../../public/logo.png?inline";
+import logo from "../../public/logo.jpg?inline";
 
 export const runtime = "edge";
 

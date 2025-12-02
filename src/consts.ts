@@ -45,10 +45,10 @@ export interface SlideTheme {
   overlayColor: string;
 }
 
-export const SITE_TITLE = "MONA";
-export const SITE_DESCRIPTION = "Mona — Learn from What We Build";
+export const SITE_TITLE = "IDEALX";
+export const SITE_DESCRIPTION = "IDEALX | Technology";
 
-export const PROD_URL = "https://www.mymona.xyz";
+export const PROD_URL = "https://tech.idealx.top";
 
 export const isProdEnv = () => {
   if (import.meta.env?.PROD || import.meta.env?.MODE === "production") {
@@ -104,7 +104,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "open-source",
     label: "GitHub",
-    href: "https://github.com/monakit/monakit",
+    href: "https://github.com/idealdestructor",
     title: "GitHub",
     description: "Explore our open-source projects.",
   },
@@ -113,16 +113,3 @@ export const MENU_ITEMS: MenuItem[] = [
 export const getNavigationItems = (): MenuItem[] => {
   return MENU_ITEMS;
 };
-
-export const DOODLE_EMOJIS = [
-  "✨",
-  "🚀",
-  "💡",
-  "🎉",
-  "🔥",
-  "🌟",
-  "🤖",
-  "🎃",
-  "🔊",
-  "📡",
-];
