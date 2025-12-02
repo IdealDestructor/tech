@@ -40,7 +40,6 @@
     "lucide-react": "^0.544.0",
     "pagefind": "^1.4.0",
     "pako": "^2.1.0",
-    "pnpm": "^10.24.0",
     "react": "^19.1.1",
     "rehype-sanitize": "^6.0.0",
     "reveal.js": "^5.2.1",
