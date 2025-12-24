@@ -4,7 +4,7 @@ author: "foxgem"
 description: "从零开始构建 AI 应用，涵盖 LLM API 调用、Prompt Engineering、RAG 实现、Agent 开发等核心内容。"
 pubDate: 2025-12-25
 tags: ["ai", "llm", "langchain", "rag", "agent"]
-theme: "dracula"
+theme: "drdracula"
 transition: "slide"
 controls: true
 progress: true
