@@ -4,7 +4,7 @@ pubDate: "2025-12-21T08:00:00.000Z"
 author: foxgem
 description: "全面掌握 CSS Grid 和 Flexbox 两大现代布局系统，从基础概念到复杂布局实战，告别浮动布局时代。"
 tags: [css, frontend, layout, grid, flexbox]
-image: "/blog-covers/css-layout.jpg"
+image: "https://picsum.photos/seed/css-layout/1600/900"
 ---
 
 CSS 布局技术经历了从 Table 布局、Float 布局到现代 Flexbox 和 Grid 的演进。本文将深入介绍这两大现代布局系统的核心概念与实战技巧。

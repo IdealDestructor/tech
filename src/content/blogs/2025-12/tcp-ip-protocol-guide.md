@@ -4,7 +4,7 @@ pubDate: "2025-12-02T13:00:00.000Z"
 author: foxgem
 description: "深入理解 TCP/IP 协议栈的工作原理，从三次握手到流量控制，全面掌握网络通信基础。"
 tags: [network, tcp-ip, computer-science, protocol]
-image: "/blog-covers/tcp-ip.jpg"
+image: "https://picsum.photos/seed/tcp-ip/1600/900"
 ---
 
 TCP/IP 协议栈是互联网的基础，理解它对于任何开发者都至关重要。本文将深入剖析 TCP/IP 的核心原理。

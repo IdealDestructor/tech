@@ -4,7 +4,7 @@ pubDate: "2025-12-25T08:00:00.000Z"
 author: foxgem
 description: "深入理解 Transformer 架构的核心组件，从自注意力机制到位置编码，再到 BERT 和 GPT 的实现原理。"
 tags: [ai, transformer, attention, deep-learning, nlp]
-image: "/blog-covers/transformer.jpg"
+image: "https://picsum.photos/seed/transformer/1600/900"
 ---
 
 Transformer 是现代大语言模型的基石，从 BERT 到 GPT 系列，都基于这一革命性架构。本文将深入解析 Transformer 的核心原理。

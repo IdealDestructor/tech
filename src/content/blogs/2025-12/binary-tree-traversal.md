@@ -4,7 +4,7 @@ pubDate: "2025-12-24T10:00:00.000Z"
 author: foxgem
 description: "全面掌握二叉树的遍历方式、递归与迭代实现、层序遍历变体，以及 LCA、路径和等高频面试题的解法。"
 tags: [algorithm, tree, binary-tree, data-structure]
-image: "/blog-covers/binary-tree.jpg"
+image: "https://picsum.photos/seed/binary-tree/1600/900"
 ---
 
 二叉树是最常见的树形数据结构，也是面试中的高频考点。本文将系统介绍二叉树的遍历方法和常见算法。

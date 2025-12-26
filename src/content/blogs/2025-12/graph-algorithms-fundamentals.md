@@ -4,7 +4,7 @@ pubDate: "2025-12-24T08:00:00.000Z"
 author: foxgem
 description: "系统学习图论算法，掌握 BFS、DFS、拓扑排序、最短路径等核心算法，解决实际的路径规划和网络问题。"
 tags: [algorithm, graph, bfs, dfs, shortest-path]
-image: "/blog-covers/graph-algorithm.jpg"
+image: "https://picsum.photos/seed/graph-algorithm/1600/900"
 ---
 
 图是计算机科学中最重要的数据结构之一，社交网络、地图导航、任务调度等问题都可以用图来建模。本文将系统介绍图论的核心算法。

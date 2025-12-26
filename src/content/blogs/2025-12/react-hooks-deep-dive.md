@@ -4,7 +4,7 @@ pubDate: "2025-12-02T08:00:00.000Z"
 author: foxgem
 description: "深入探索 React Hooks 的工作原理、常见陷阱与最佳实践，帮助你写出更优雅的 React 代码。"
 tags: [react, hooks, frontend, javascript]
-image: "/blog-covers/react-hooks.jpg"
+image: "https://picsum.photos/seed/react-hooks/1600/900"
 ---
 
 React Hooks 自 16.8 版本引入以来，彻底改变了我们编写 React 组件的方式。本文将深入探讨 Hooks 的工作原理和最佳实践。

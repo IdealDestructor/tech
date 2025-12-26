@@ -4,7 +4,7 @@ pubDate: "2025-12-02T10:00:00.000Z"
 author: foxgem
 description: "探索 Next.js 14 的新特性，包括 App Router、Server Components 和 Server Actions，开启全栈开发新篇章。"
 tags: [nextjs, react, fullstack, frontend]
-image: "/blog-covers/nextjs.jpg"
+image: "https://picsum.photos/seed/nextjs/1600/900"
 ---
 
 Next.js 是 React 生态中最受欢迎的全栈框架，Next.js 14 带来了许多革命性的特性。本文将带你全面了解这些新特性。

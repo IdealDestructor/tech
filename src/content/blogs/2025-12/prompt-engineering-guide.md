@@ -4,7 +4,7 @@ pubDate: "2025-12-25T10:00:00.000Z"
 author: foxgem
 description: "系统学习 Prompt Engineering 技巧，从基础原则到高级策略，掌握与大语言模型有效沟通的艺术。"
 tags: [ai, prompt, llm, chatgpt, aigc]
-image: "/blog-covers/prompt-engineering.jpg"
+image: "https://picsum.photos/seed/prompt-engineering/1600/900"
 ---
 
 Prompt Engineering 是与大语言模型（LLM）有效沟通的关键技能。好的 Prompt 可以显著提升 AI 输出的质量和准确性。本文将系统介绍 Prompt Engineering 的核心技巧。

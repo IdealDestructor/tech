@@ -4,7 +4,7 @@ pubDate: "2025-12-22T08:00:00.000Z"
 author: foxgem
 description: "深入理解 Node.js 事件循环、异步模型和并发控制，掌握 Promise、async/await 的最佳实践，写出高性能的 Node.js 代码。"
 tags: [nodejs, javascript, async, backend]
-image: "/blog-covers/nodejs-async.jpg"
+image: "https://picsum.photos/seed/nodejs-async/1600/900"
 ---
 
 Node.js 的异步非阻塞 I/O 模型是其高性能的核心。本文将深入探讨 Node.js 的异步机制，帮助你写出高效、可维护的异步代码。

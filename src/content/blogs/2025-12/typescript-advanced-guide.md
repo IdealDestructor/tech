@@ -4,7 +4,7 @@ pubDate: "2025-12-20T08:00:00.000Z"
 author: foxgem
 description: "深入探索 TypeScript 的高级类型系统，掌握类型推断、条件类型、模板字面量类型等进阶技巧，写出更安全的代码。"
 tags: [typescript, frontend, javascript, types]
-image: "/blog-covers/typescript.jpg"
+image: "https://picsum.photos/seed/typescript/1600/900"
 ---
 
 TypeScript 已成为现代前端开发的标配。本文将带你深入理解 TypeScript 的高级类型系统，掌握类型体操的核心技巧。

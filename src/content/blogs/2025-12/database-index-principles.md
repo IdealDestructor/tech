@@ -4,7 +4,7 @@ pubDate: "2025-12-23T08:00:00.000Z"
 author: foxgem
 description: "深入理解数据库索引的工作原理，掌握 B+ 树结构、索引类型和查询优化技巧，让你的 SQL 查询快如闪电。"
 tags: [database, mysql, index, backend, optimization]
-image: "/blog-covers/database-index.jpg"
+image: "https://picsum.photos/seed/database-index/1600/900"
 ---
 
 数据库索引是提升查询性能的关键。本文将深入探讨索引的底层原理、设计原则和优化技巧，帮助你写出高效的数据库查询。

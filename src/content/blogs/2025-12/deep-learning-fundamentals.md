@@ -4,7 +4,7 @@ pubDate: "2025-12-02T12:00:00.000Z"
 author: foxgem
 description: "系统讲解深度学习的基础知识，从感知机到多层神经网络，理解深度学习的核心概念。"
 tags: [deep-learning, neural-network, machine-learning, ai]
-image: "/blog-covers/deep-learning.jpg"
+image: "https://picsum.photos/seed/deep-learning/1600/900"
 ---
 
 深度学习是人工智能领域最重要的技术之一。本文将从最基础的感知机开始，逐步深入到现代神经网络。

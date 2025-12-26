@@ -4,7 +4,7 @@ pubDate: "2025-12-02T14:00:00.000Z"
 author: foxgem
 description: "深入理解操作系统的进程调度算法，从 FCFS 到 CFS，掌握 CPU 资源分配的核心机制。"
 tags: [operating-system, process, scheduling, computer-science]
-image: "/blog-covers/os-process.jpg"
+image: "https://picsum.photos/seed/os-process/1600/900"
 ---
 
 进程调度是操作系统的核心功能之一，决定了 CPU 资源如何在多个进程之间分配。本文将详细介绍各种调度算法。

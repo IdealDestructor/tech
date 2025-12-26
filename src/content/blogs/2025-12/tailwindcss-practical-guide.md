@@ -4,7 +4,7 @@ pubDate: "2025-12-02T09:00:00.000Z"
 author: foxgem
 description: "从零开始学习 Tailwind CSS，掌握原子化 CSS 框架的核心理念与实战技巧。"
 tags: [tailwindcss, css, frontend, design]
-image: "/blog-covers/tailwindcss.jpg"
+image: "https://picsum.photos/seed/tailwindcss/1600/900"
 ---
 
 Tailwind CSS 是一个原子化的 CSS 框架，它通过提供大量的工具类来构建现代网页界面。本文将带你深入了解 Tailwind 的核心概念和实战技巧。

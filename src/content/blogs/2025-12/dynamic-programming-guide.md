@@ -4,7 +4,7 @@ pubDate: "2025-12-02T15:00:00.000Z"
 author: foxgem
 description: "系统学习动态规划的核心思想，掌握解题模板，攻克 LeetCode 高频 DP 问题。"
 tags: [algorithm, dynamic-programming, leetcode, interview]
-image: "/blog-covers/dynamic-programming.jpg"
+image: "https://picsum.photos/seed/dynamic-programming/1600/900"
 ---
 
 动态规划（Dynamic Programming, DP）是算法面试中最重要的主题之一。本文将帮助你建立系统的 DP 思维。

@@ -4,7 +4,7 @@ pubDate: "2025-12-02T11:00:00.000Z"
 author: foxgem
 description: "深入浅出地解析大语言模型的核心原理，从 Transformer 架构到 GPT 的演进。"
 tags: [llm, ai, deep-learning, transformer]
-image: "/blog-covers/llm.jpg"
+image: "https://picsum.photos/seed/llm/1600/900"
 ---
 
 大语言模型（Large Language Models, LLM）如 GPT、Claude、LLaMA 等已经彻底改变了人工智能领域。本文将深入解析这些模型背后的核心原理。

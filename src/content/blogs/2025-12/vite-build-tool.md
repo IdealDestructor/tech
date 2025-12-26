@@ -4,7 +4,7 @@ pubDate: "2025-12-02T16:00:00.000Z"
 author: foxgem
 description: "深入理解 Vite 的工作原理，掌握现代前端构建工具的核心概念与实践技巧。"
 tags: [vite, frontend, build-tool, javascript]
-image: "/blog-covers/vite.jpg"
+image: "https://picsum.photos/seed/vite/1600/900"
 ---
 
 Vite（法语"快"的意思）是新一代前端构建工具，由 Vue.js 作者尤雨溪开发。本文将深入探讨 Vite 的工作原理。
